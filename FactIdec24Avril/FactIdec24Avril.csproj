@@ -71,6 +71,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>modelFactureIdec.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="Utilisateur.cs">
       <DependentUpon>modelFactureIdec.tt</DependentUpon>
     </Compile>
