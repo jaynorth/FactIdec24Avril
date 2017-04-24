@@ -34,6 +34,78 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <EntityDeploy Include="modelFactureIdec.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>modelFactureIdec.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="modelFactureIdec.edmx.diagram">
+      <DependentUpon>modelFactureIdec.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Article.cs">
+      <DependentUpon>modelFactureIdec.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Client.cs">
+      <DependentUpon>modelFactureIdec.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Facture.cs">
+      <DependentUpon>modelFactureIdec.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LigneFacture.cs">
+      <DependentUpon>modelFactureIdec.tt</DependentUpon>
+    </Compile>
+    <Compile Include="modelFactureIdec.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>modelFactureIdec.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="modelFactureIdec.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>modelFactureIdec.tt</DependentUpon>
+    </Compile>
+    <Compile Include="modelFactureIdec.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>modelFactureIdec.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Utilisateur.cs">
+      <DependentUpon>modelFactureIdec.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="modelFactureIdec.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>modelFactureIdec.Context.cs</LastGenOutput>
+      <DependentUpon>modelFactureIdec.edmx</DependentUpon>
+    </Content>
+    <Content Include="modelFactureIdec.edmx.sql" />
+    <Content Include="modelFactureIdec.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>modelFactureIdec.edmx</DependentUpon>
+      <LastGenOutput>modelFactureIdec.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
